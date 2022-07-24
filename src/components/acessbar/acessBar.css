@@ -1,0 +1,16 @@
+
+.acessBar{
+   display: flex;
+   justify-content: left;
+   width: 40%;
+   margin-top: 20px;
+}
+.acessBar>p{
+   margin-left: 70px;
+}
+
+.acessBar>p:hover{
+   text-decoration: underline;
+   text-decoration-color: palevioletred;
+   cursor: pointer;
+}

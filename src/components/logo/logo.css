@@ -1,0 +1,11 @@
+.logo-pic{
+    width: 10%;
+    height: 100%;
+}
+.logo-pic:hover{
+    cursor: pointer;
+}
+.logo-pic>img{
+    width: 100%;
+    height: 100%;
+}

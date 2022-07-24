@@ -1,0 +1,30 @@
+.footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 450px;
+    margin-top: 100px;
+    background-color: whitesmoke;
+    justify-content: center;
+    
+
+}
+.footer>div{
+    width: 20%;
+    height: 80%;
+}
+.footer>div>div{
+    width: 50%;
+    margin: 0 auto;
+}
+.footer>div>div>p{
+   text-align: left;
+   font-size: small;
+}
+.footer>div>div>p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+ }
+ .footer>div>div>div{
+   margin-top: 50px;
+ }

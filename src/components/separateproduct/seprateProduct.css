@@ -1,0 +1,84 @@
+.sep-product{
+    margin-top: 15vh;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
+.sep-product>div:nth-child(1){
+width: 25%;
+height: auto;
+}
+.sep-product>div:nth-child(1)>div{
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+ }
+ .sep-product>div:nth-child(1)>div>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+ }
+ .sep-product>div:nth-child(2){
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+    }
+    .sep-product>div:nth-child(2)>img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        }
+    .sep-product>div:nth-child(3){
+        width: 50%;
+        height: auto;
+
+        
+        }
+        .sep-product>div:nth-child(3)>div{
+            width: 50%;
+            border:solid black 2 px;
+       
+            }
+            .sep-product>div:nth-child(3)>div:nth-child(1){
+                width: 50%;
+                border:solid black 2 px;
+           height: 60%;
+                }
+                .sep-product>div:nth-child(3)>div:nth-child(2){
+                    width: 50%;
+                    border:solid black 2 px;
+               height: 20%;
+                    }
+            .sep-product>div:nth-child(3)>div p{
+               text-align: left;
+               font-size: larger;
+               font-weight: 500;
+               margin-left: 20px;
+               color: gray;
+                }
+                .sep-product>div:nth-child(3)>div>span{
+                    display: flex;
+                    margin-left: 20px;
+                    align-items: center;
+                    width: 30%;
+                    justify-content: space-around;
+                     }                
+
+
+.cart-button{
+    background-color: hotpink;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 150px;
+    padding: 5px 20px;
+    width: 150px;
+    height: 40px;
+  }
+  .cart-button:hover{
+    cursor: pointer;
+  } 

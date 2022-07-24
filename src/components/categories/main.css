@@ -1,0 +1,127 @@
+
+ 
+
+
+
+.inside-p{
+    color: var(--text-dark);
+    color: grey;
+    font: 0.9rem/1.4 Helvetica,Arial,sans-serif;
+    letter-spacing: .02rem;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.rount-color{
+    width: 15px;
+    height: 15px !important ;
+    border-radius: 20px;
+    border: solid brown 3px;
+    margin-top: 6px;
+}
+.bottom-div{
+    height: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    margin-top: 10vh;
+    position:relative
+}
+.main-container>div:nth-child(1){
+    width: 15vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh !important;
+    height: 10vh;
+}
+.main-container>div:nth-child(2){
+    width: 85vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+}
+.main-container>div:nth-last-child(1)>div{
+    position: relative;
+    height: 450px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    bottom: 0px;
+  }
+  
+  .main-container>div:nth-last-child(1)>div>div:nth-child(1){
+    height: 60%;
+    
+  }
+  .main-container>div:nth-last-child(1)>div>div>img{
+    width: 100%;
+    height: 100%;
+    grid-gap: 1px;
+  }
+  .m-button{
+    background-color: hotpink;
+    border: none;
+    height: 30px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+  }
+  .m-button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+.main-container>div:nth-child(1)>div{
+    display: block;
+
+}
+.buty-shop{
+   margin: 20px auto 0 auto;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    padding: 7px;
+    font-weight: 500;
+    border: solid 2px palevioletred;
+    background-color: palevioletred;
+    color: white;
+    border-radius: 5px;
+}
+.buty-shop:hover{
+   cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    padding: 8px;
+    background-color: white;
+    color: palevioletred;
+    font-weight: 500;
+    border-radius: 5px;
+    
+}
+
+
+/* Home section */
+
+.home-main{
+  width: 100%;
+  height: auto;
+  margin-top: 10vh;
+
+}
+.home-main:hover{
+  cursor: pointer;
+}
+.home-main>div{
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.home-main>div>img{
+  width: 100%;
+  height: 100%;
+}
