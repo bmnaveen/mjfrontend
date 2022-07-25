@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import "./main.css"
 import { useNavigate } from 'react-router-dom'
 const Show = ({products}) => {
+  
   const navigate=useNavigate();
 useEffect(()=>{
   window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
@@ -10,9 +11,7 @@ useEffect(()=>{
     <>
     {
       products.map((p)=>{
-        return <div onClick={()=>{
-          console.log(p._id)
-        }}>
+        return <div>
 <div onMouseOver={(e)=>{
 e.target.src=p.img2
 }}

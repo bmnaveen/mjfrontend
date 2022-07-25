@@ -12,7 +12,7 @@ const SeprateProduct = () => {
   const navigate=useNavigate();
   const [separate,setSeparate]=useState({})
   const [firstImage,setFirstImage]=useState("")
-
+  const [temp,setTemp]=useState("");
 useEffect(()=>{
    axios.get(`https://mj-back.herokuapp.com/products/product/${id}`).then((res)=>{
     setSeparate(res.data);
@@ -36,6 +36,10 @@ return navigate("/login")
   axios.post("https://mj-back.herokuapp.com/cart",separate).then((res)=>{
     dispatch(getProductCart(userId))
     
+    setTemp("Product added in bag ")
+    setTimeout(()=>{
+      setTemp("")
+    },3000)
   }).catch((err)=>{
     console.log(err.message)
   })
@@ -73,8 +77,10 @@ return navigate("/login")
       
       
       </div>
-      <div>
+      <div className='final-cart-div' >
+      
       <button onClick={addToCart} className="cart-button">Add to bag</button>
+      <p>{temp}</p>
       </div>
     </div>
     </div>
