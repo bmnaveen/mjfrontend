@@ -23,7 +23,9 @@ useEffect(()=>{
 })
 
 },[])
-
+useEffect(()=>{
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+},[])
 
 const addToCart=()=>{
   if(!userId){
@@ -61,10 +63,9 @@ return navigate("/login")
       <p>
         {separate.name}
       </p>
-      <p className='inside-p'>₹{+(separate.price)*80>=5000 ?  (Math.round((+(separate.price)*80))-((Math.round(+(separate.price)*80)*(45/100)))):+(separate.price)*80}</p>
-      {+(separate.price)*80>=5000 ? <p style={{textDecoration:"line-through"}} className='inside-p'>₹{+(separate.price)*80}</p> : null }
-      
-      {+(separate.price)*80>=5000 ? <p className='inside-p'>Offer {45}%</p> : null }
+      <p className='inside-p'>₹{ (separate.price)-((separate.price)*(separate.discount/100))}</p>
+     <p style={{textDecoration:"line-through"}} className='inside-p'>₹{separate.price}</p> 
+      <p className='inside-p'>Offer {separate.discount}%</p>
       <p className='inside-p'>Size:{separate.size}</p>
       <span>
       <p >Color:</p><div style={{backgroundColor:`${separate.color}`}} className='rount-color'></div>

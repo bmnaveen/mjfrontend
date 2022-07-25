@@ -9,13 +9,13 @@ const userId=useSelector((store)=>store.user)
 const cart=useSelector((store)=>store.cart)
 const [temp,setTemp]=useState("");
 let sum=0;
-
+useEffect(()=>{
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+},[])
 cart.forEach((e)=>{
-  if(e.price*80>=5000){
-    sum+=((+(e.price)*80)-(((+(e.price)*80)*(45/100))))
-  }else{
-    sum+=e.price*80
-  }
+ 
+    sum+=((e.price)-((e.price)*(e.discount/100)))
+  
 })
 useEffect(()=>{
 dispatch(getProductCart(userId))
@@ -42,12 +42,10 @@ const deleteCart=(x)=>{
       <p>
         {separate.name}
       </p>
-      <p className='inside-p'>₹{+(separate.price)*80>=5000 ?  ((+(separate.price)*80)-(((+(separate.price)*80)*(45/100)))):+(separate.price)*80}</p>
-      {+(separate.price)*80>=5000 ? <p style={{textDecoration:"line-through"}} className='inside-p'>₹{+(separate.price)*80}</p> : null }
-      
-      {+(separate.price)*80>=5000 ? <p className='inside-p'>Offer {45}%</p> : null }
+      <p className='inside-p'>{(separate.price)-((separate.price)*(separate.discount/100))}</p>
+   <p style={{textDecoration:"line-through"}} className='inside-p'>₹{separate.price}</p> 
+      <p className='inside-p'>Offer {separate.discount}%</p> 
       <p className='inside-p'>Size:{separate.size}</p>
-      
      <div style={{backgroundColor:`${separate.color}`}} className='rount-color'></div>
  
  <button onClick={()=>[
@@ -65,9 +63,9 @@ const deleteCart=(x)=>{
         cart.length>=1 ? <div>
             <div>
           
-          <h2>Total=₹{sum}</h2>
-          <h2>Gst 5%=₹{((sum*(5/100)))}</h2>
-          <h2>Subtotal=₹{sum+((sum*(5/100)))}</h2>
+          <p>Total: ₹ {sum}</p>
+          <p>Gst 5%: ₹ {((sum*(5/100)))}</p>
+          <p>Subtotal: ₹ {sum+((sum*(5/100)))}</p>
           <button onClick={()=>{
             setTemp("Processing....")
             return setTimeout(()=>{

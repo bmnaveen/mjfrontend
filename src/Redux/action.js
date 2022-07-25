@@ -45,7 +45,7 @@ await axios.get(`http://localhost:5000/products/${category}`).then((res)=>{
 export  const getProductCart=(id)=>async(dispatch)=>{
 
   await axios.get(`http://localhost:5000/cart/${id}`).then((res)=>{
-     console.log(res.data)
+    
     dispatch(addCart(res.data)) ; 
   }).catch((err)=>{
       console.log(err.message)

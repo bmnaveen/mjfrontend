@@ -1,8 +1,9 @@
 .accDetailes{
-    width: 15%;
+    width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 30px;
 }
 .accDetailes>div{
     width: 30px;
@@ -10,6 +11,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.accDetailes>div:hover{
+    cursor:pointer
 }
 .accDetailes>div>img{
     width: 100%;

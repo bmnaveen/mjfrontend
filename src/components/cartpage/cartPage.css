@@ -10,11 +10,11 @@
     margin-left: 2%;
 }
 .Cart-Page>div:nth-child(2){
-    width: 50%;
-    margin-left: 5%;
+    width: 20%;
+    margin-left: 30%;
     margin-top: 20px;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-height: 350px;
 }
 .Cart-Page>div:nth-child(2)>div{
     width: 60%;
@@ -30,7 +30,7 @@
     
 }
 .Cart-Page>div:nth-child(2)>div>button{
-    width: 30%;
+    width: 90%;
     font-size: 20px;
     margin-top: 40px;
     border-radius: 5px;
@@ -44,7 +44,7 @@
     
    cursor: pointer;
 }
-.Cart-Page>div:nth-child(2)>div>h2{
+.Cart-Page>div:nth-child(2)>div>p{
     text-align: left;
     
 }

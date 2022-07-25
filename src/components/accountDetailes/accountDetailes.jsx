@@ -20,7 +20,7 @@ user  ? <button onClick={()=>{
 </button> :<button onClick={()=>{
   navigate("/login")
 }} className='m-button'>
-  Login
+  SignIn
 </button>
       }
       

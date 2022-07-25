@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+*button{
+  color:palevioletred
+}
 /* .mainContainer{
   display: flex;
   min-height: 90vh;

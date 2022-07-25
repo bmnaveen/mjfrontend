@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { changeUser } from '../../Redux/action';
 import "./login.css";
 import axios from "axios";
+import { getProductCart } from '../../Redux/action';
 const LogIn = () => {
+
   const navigate=useNavigate();
 const dispatch=useDispatch();
   const [message,setMessage]=useState("")
@@ -33,9 +35,10 @@ setUser({
   }
   const further=(x)=>{
     setMessage("")
-    console.log(x)
     dispatch(changeUser(x))
-    navigate("/")
+    dispatch(getProductCart(x))
+    navigate(-1)
+     
   }
   const loginUser=()=>{
    if(!checkData()){
@@ -88,3 +91,5 @@ setUser({
 }
 
 export default LogIn
+
+

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./main.css"
 import { useNavigate } from 'react-router-dom'
 const Show = ({products}) => {
   const navigate=useNavigate();
-
+useEffect(()=>{
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+},[])
   return (
     <>
     {
@@ -19,9 +21,10 @@ onMouseLeave={(e)=>{
   <img  src={p.img1} alt="ico" />
 </div>
 <p className='inside-p'>{p.name}</p>
-<span className='bottom-div'><p className='inside-p'>₹{+ p.price *80}</p>{(+ p.price *80)>=5000 ? <p  className='inside-p'>Offer 45%</p> : null}  <p className='inside-p'>Size:{p.size}</p><div style={{backgroundColor:`${p.color}`}} className='rount-color'></div></span>
+<span className='bottom-div'><p className='inside-p'>₹{ p.price }</p><p  className='inside-p'>Offer {p.discount}%</p> <p className='inside-p'>Size:{p.size}</p><div style={{backgroundColor:`${p.color}`}} className='rount-color'></div></span>
 <div onClick={()=>[
   navigate(`/product/${p._id}`)
+  
 ]} className='buty-shop'>Quick shop</div>
 
         </div>

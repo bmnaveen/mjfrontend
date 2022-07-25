@@ -43,7 +43,7 @@
     width: 85vw;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 15px;
 }
 .main-container>div:nth-last-child(1)>div{
@@ -64,7 +64,7 @@
     grid-gap: 1px;
   }
   .m-button{
-    background-color: hotpink;
+    background-color: #ff7d81;
     border: none;
     height: 30px;
     margin-top: 10px;
