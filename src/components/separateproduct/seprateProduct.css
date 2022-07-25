@@ -92,9 +92,10 @@ height: auto;
   }
   .loading-separate{
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
   .loading-separate>h1{
    text-align: center;
-   margin-top: 100px;
+   margin-top: 150px;
+   color: palevioletred;
   }
