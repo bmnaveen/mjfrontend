@@ -9,7 +9,8 @@
    margin-left: 70px;
    font-weight: 500;
    text-decoration-color: palevioletred;
-   font-size: 24px;
+   font-size: 20px;
+   color:gray
 }
 
 .acessBar>p:hover{
