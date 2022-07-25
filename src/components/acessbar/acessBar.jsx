@@ -14,8 +14,8 @@ access=access.pathname.split("/")
   return (
     <div className='acessBar'>
       <p id='all'  style={ {textDecoration:access[1]==="all" ? "underline" : null}}   onClick={routeToPage}>All</p>
-      <p id='mens' style={ {textDecoration:access[1]==="mens" ? "underline" : null}}    onClick={routeToPage}>Mens</p>
-      <p id='womens' style={ {textDecoration:access[1]==="womens" ? "underline" : null}}    onClick={routeToPage}>Womens</p>
+      <p id='mens' style={ {textDecoration:access[1]==="mens" ? "underline" : null}}    onClick={routeToPage}>Men</p>
+      <p id='womens' style={ {textDecoration:access[1]==="womens" ? "underline" : null}}    onClick={routeToPage}>Women</p>
     </div>
   )
 }
