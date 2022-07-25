@@ -10,7 +10,9 @@ useEffect(()=>{
     <>
     {
       products.map((p)=>{
-        return <div>
+        return <div onClick={()=>{
+          console.log(p._id)
+        }}>
 <div onMouseOver={(e)=>{
 e.target.src=p.img2
 }}

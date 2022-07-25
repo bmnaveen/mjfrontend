@@ -22,6 +22,13 @@ setUser({
 
   }
   const checkData=()=>{
+    if(user.Mobile.length>=11){
+      setMessage("Invalid data")
+      setTimeout(()=>{
+       setMessage("")
+     },3000)
+     return false
+    }
     for(let x in user){
       if(user[x].length<=9){
         setMessage("Invalid data")
@@ -77,9 +84,9 @@ setUser({
 
     <div>
     <h3>{message}</h3>
-    <input onChange={changeUserData}  id='Mobile' type="mobile" placeholder='Mobile number 10 digit'/>
+    <input onChange={changeUserData}  id='Mobile' type="number" placeholder=' 10 digit Mobile number'/>
     <br />
-    <input onChange={changeUserData} id='Password' type="password"  placeholder=' Atleast 10 charecter Password' />
+    <input onChange={changeUserData} id='Password' type="password"  placeholder=' Minimum 10 charecter Password' />
     <br />
     <div>
     <button onClick={loginUser} className='sign-shop'>Signin</button><button onClick={signupUser} className='sign-shop'>Signup</button>
