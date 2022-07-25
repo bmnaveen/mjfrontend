@@ -5,12 +5,18 @@ import Show from './show'
 import SortOptions from '../sortoptions/sortOptions'
 const Mens = () => {
   const dispatch=useDispatch();
+  const [loading,setLoading]=useState(false)
   const products=useSelector((store)=>store.mainproduct);
   useEffect(()=>{
 dispatch(productCall("mens"))
+setTimeout(()=>{
+  setLoading(true)
+},1500)
   },[])
   return (
-    <div className='main-container'>
+    <>
+    {
+      loading ?<div className='main-container'>
       <div>
       <SortOptions/>
       </div>
@@ -18,7 +24,12 @@ dispatch(productCall("mens"))
     <Show products={products}/>
     </div>
     
+    </div> : <div className='loading-separate'>
+      <h1>Loading...</h1>
     </div>
+    }
+    </>
+    
   )
 }
 

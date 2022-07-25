@@ -6,19 +6,27 @@ import SortOptions from '../sortoptions/sortOptions';
 const Womens = () => {
   const dispatch=useDispatch();
   const products=useSelector((store)=>store.mainproduct)
+  const [loading,setLoading]=useState(false)
   useEffect(()=>{
 dispatch(productCall("womens"))
+setLoading(true)
   },[])
   return (
-    <div className='main-container'>
+    <>
+    {
+      loading ?<div className='main-container'>
+      <div>
+      <SortOptions/>
+      </div>
     <div>
-    <SortOptions/>
+    <Show products={products}/>
     </div>
-  <div>
-  <Show products={products}/>
-  </div>
-  
-  </div>
+    
+    </div> : <div className='loading-separate'>
+      <h1>Loading...</h1>
+    </div>
+    }
+    </>
   )
 }
 
