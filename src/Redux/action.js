@@ -34,7 +34,7 @@ export const changeUser=(payload)=>(
   })
 export  const productCall=(category)=>async(dispatch)=>{
 
-await axios.get(`http://localhost:5000/products/${category}`).then((res)=>{
+await axios.get(`https://mj-back.herokuapp.com/products/${category}`).then((res)=>{
    
   dispatch(addMainProduct(res.data)) ; 
 }).catch((err)=>{
@@ -44,7 +44,7 @@ await axios.get(`http://localhost:5000/products/${category}`).then((res)=>{
 
 export  const getProductCart=(id)=>async(dispatch)=>{
 
-  await axios.get(`http://localhost:5000/cart/${id}`).then((res)=>{
+  await axios.get(`https://mj-back.herokuapp.com/cart/${id}`).then((res)=>{
     
     dispatch(addCart(res.data)) ; 
   }).catch((err)=>{

@@ -22,7 +22,7 @@ dispatch(getProductCart(userId))
 },[])
 
 const deleteCart=(x)=>{
-  axios.delete(`http://localhost:5000/cart/${x}`).then((res)=>{
+  axios.delete(`https://mj-back.herokuapp.com/cart/${x}`).then((res)=>{
     dispatch(getProductCart(userId))
   }).catch((err)=>{
     console.log(err.message)

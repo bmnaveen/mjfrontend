@@ -14,7 +14,7 @@ const SeprateProduct = () => {
   const [firstImage,setFirstImage]=useState("")
 
 useEffect(()=>{
-   axios.get(`http://localhost:5000/products/product/${id}`).then((res)=>{
+   axios.get(`https://mj-back.herokuapp.com/products/product/${id}`).then((res)=>{
     setSeparate(res.data);
     setFirstImage(res.data.img1)
     
@@ -33,7 +33,7 @@ return navigate("/login")
   }
   separate["userId"]=userId;
   delete separate["_id"]
-  axios.post("http://localhost:5000/cart",separate).then((res)=>{
+  axios.post("https://mj-back.herokuapp.com/cart",separate).then((res)=>{
     dispatch(getProductCart(userId))
     
   }).catch((err)=>{

@@ -51,7 +51,7 @@ setUser({
    if(!checkData()){
     return;
    }
-    axios.post("http://localhost:5000/user/login",{
+    axios.post("https://mj-back.herokuapp.com/user/login",{
       "Mobile":user.Mobile,
       "Password":user.Password
     }).then((res)=>{
@@ -67,7 +67,7 @@ setUser({
     if(!checkData()){
       return;
      }
-    axios.post("http://localhost:5000/user/signup",{
+    axios.post("https://mj-back.herokuapp.com/user/signup",{
       "Mobile":user.Mobile,
       "Password":user.Password
     }).then((res)=>{
