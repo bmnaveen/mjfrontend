@@ -13,12 +13,11 @@ const SeprateProduct = () => {
   const [separate,setSeparate]=useState({})
   const [firstImage,setFirstImage]=useState("")
   const [temp,setTemp]=useState("");
-  const [loading,setLoading]=useState(false)
+  const [loading,setLoading]=useState(true)
 useEffect(()=>{
    axios.get(`https://mj-back.herokuapp.com/products/product/${id}`).then((res)=>{
     setSeparate(res.data);
     setFirstImage(res.data.img1)
-    setLoading(true)
     return setTimeout(()=>{
       setLoading(false);
 },1500)
