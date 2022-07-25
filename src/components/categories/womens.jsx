@@ -9,7 +9,9 @@ const Womens = () => {
   const [loading,setLoading]=useState(false)
   useEffect(()=>{
 dispatch(productCall("womens"))
-setLoading(true)
+setTimeout(()=>{
+  setLoading(true)
+},1500)
   },[])
   return (
     <>

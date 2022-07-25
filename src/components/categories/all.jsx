@@ -14,7 +14,9 @@ const products=useSelector((store)=>store.mainproduct);
 useEffect(()=>{
   
   dispatch(productCall("all"))
-  setLoading(true)
+  setTimeout(()=>{
+    setLoading(true)
+  },1500)
     },[])
 
 

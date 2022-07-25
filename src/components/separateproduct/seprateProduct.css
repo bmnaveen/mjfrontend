@@ -90,12 +90,4 @@ height: auto;
     color: aqua;
     width: 100%;
   }
-  .loading-separate{
-    width: 100%;
-    height: 300px;
-  }
-  .loading-separate>h1{
-   text-align: center;
-   margin-top: 150px;
-   color: palevioletred;
-  }
+  
