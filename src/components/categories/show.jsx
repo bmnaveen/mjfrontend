@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const Show = ({products}) => {
   
   const navigate=useNavigate();
-useEffect(()=>{
-  window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
-},[])
+
   return (
     
     <>

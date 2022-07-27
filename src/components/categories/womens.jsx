@@ -4,6 +4,9 @@ import { productCall } from '../../Redux/action'
 import Show from './show';
 import SortOptions from '../sortoptions/sortOptions';
 const Womens = () => {
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+  },[])
   const dispatch=useDispatch();
   const products=useSelector((store)=>store.mainproduct)
   const [loading,setLoading]=useState(false)

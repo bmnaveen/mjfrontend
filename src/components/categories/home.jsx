@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import {getProductCart} from '../../Redux/action'
 import { useDispatch,useSelector } from 'react-redux'
 const Home = () => {
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+  },[])
   const navigate=useNavigate();
   const dispatch=useDispatch();
  const userId=useSelector((store)=>store.user)

@@ -4,6 +4,9 @@ import { useDispatch,useSelector } from 'react-redux/es/exports'
 import Show from './show'
 import SortOptions from '../sortoptions/sortOptions'
 const Mens = () => {
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' })
+  },[])
   const dispatch=useDispatch();
   const [loading,setLoading]=useState(false)
   const products=useSelector((store)=>store.mainproduct);
